@@ -10,10 +10,10 @@ Semi-auto mode: automated placement of buy/sell orders on selected coins, stop l
 
 Full auto mode: do nothing while price rises, sell on price drop. 
 
-There was an auto buying mode, too, but I never implemented any serious technical analysis of the price and I doubt that technical analysis is of any use at all. That's why I decided to pay more attention to fundamental analysis instead :) And let this thing be just a helper tool for good old manual trading. There are also three more features: crypto portfolio, mining calculator and a list of promising coins, all in one database and currently in development.
+There was an auto buying mode, too, but I never implemented any serious technical analysis of the price and I doubt that technical analysis is of any use at all, especially on falling markets. That's why I decided to pay more attention to fundamental analysis instead, and let this thing be just a helper tool for good old manual trading. There are also three more features: crypto portfolio, mining calculator and a list of promising coins, all in one database and currently in development.
 
 Some screenshots:
 
-![Coins listing](/screenshots/mainpage.png?raw=true)
+![Main page](/screenshots/mainpage.png?raw=true)
 
 ![Coins listing](/screenshots/buycoins.png?raw=true)
