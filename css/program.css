@@ -1,0 +1,92 @@
+.content {
+width:500px;
+margin:0 auto;
+margin-top: 100px;
+font-family: Verdana, Arial;
+}
+.market {
+width: 200px;
+padding: 10px;
+display: inline-block;
+}
+.header {
+width: 600px;
+padding: 10px;
+clear: both;
+font-family: Verdana, Arial;
+font-size: 26px;
+}
+.sold {
+width: 800px;
+padding: 10px;
+font-family: Verdana, Arial;
+font-size: 16px;
+}
+.hold {
+font-family: Verdana, Arial;
+font-size: 10px;
+color: Gray;
+}
+.menu {
+width: 600px;
+padding: 10px;
+clear: both;
+font-family: Verdana, Arial;
+font-size: 16px;
+}
+.currentInfo {
+width: 284px;
+margin-left: 2px;
+margin-bottom: 5px;
+padding: 6px;
+font-family: Verdana, Arial;
+font-size: 10px;
+color: Black;
+background-color: LightGreen;
+}
+.message {
+display: table;
+margin: 10px;
+padding-left: 5px;
+padding-right: 5px;
+border: 1px solid #e7e7e7;
+border-radius: 10px;
+background-color: LightGreen;
+animation-duration: 2s;
+animation-timing-function: ease-out;
+animation-delay: 0s;
+animation-iteration-count: 1;
+animation-name: message;
+opacity: 0;
+}
+.deleteButton {
+font-family: Verdana, Arial;
+font-size: 12px;
+}
+.deleteButton A {
+color: Red;
+}
+@keyframes message {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+A {
+text-decoration: none;
+color: Black;
+}
+A:hover {
+text-decoration: underline;
+}
+FORM {
+width: 300px;
+font-family: Verdana, Arial;
+font-size: 12px;
+}
+INPUT, TEXTAREA {
+margin-top: 5px;
+margin-bottom: 5px;
+}

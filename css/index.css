@@ -1,0 +1,106 @@
+.content {
+width:800px;
+margin:0 auto;
+margin-top: 100px;
+font-family: Verdana, Arial;
+}
+.market {
+width: 200px;
+padding: 10px;
+display: inline-block;
+vertical-align: top;
+}
+.header {
+width: 600px;
+padding: 10px;
+clear: both;
+font-family: Verdana, Arial;
+font-size: 26px;
+}
+.sold {
+width: 800px;
+font-family: Verdana, Arial;
+font-size: 10px;
+}
+.sellDate {
+font-family: Verdana, Arial;
+font-size: 10px;
+margin-left: 10px;
+}
+.hold {
+font-family: Verdana, Arial;
+font-size: 10px;
+color: Gray;
+}
+.tradeInfo {
+font-family: monospace, monospace;
+font-size: 12px;
+}
+.menu {
+width: 600px;
+padding: 10px;
+clear: both;
+font-family: Verdana, Arial;
+font-size: 16px;
+}
+.menuItem {
+display: inline-block;
+}
+A {
+text-decoration: none;
+color: Black;
+}
+A:hover {
+
+}
+A.tooltip {
+
+}
+A.tooltip span {
+display: none;
+}
+A.tooltip:hover span {
+position: relative;
+top: 10px;
+left: 0px;
+display: block;
+min-width: 50px;
+max-width: 200px;
+color: black;
+background-color: #ffffff;
+border: 1px solid #000000;
+border-radius: 10px;
+padding: 5px;
+font-family: Verdana, Arial;
+font-size: 10px;
+text-decoration: none;
+}
+IMG {
+margin-top: 5px;
+padding-right: 5px;
+float: left;
+vertical-align: top;
+}
+.button {
+border: none;
+background-color: White;
+padding-left: 5px;
+padding-right: 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+font-family: Verdana, Arial;
+font-size: 16px;
+}
+.button:hover {
+cursor: pointer;
+}
+.balance {
+font-family: Verdana, Arial;
+font-size: 16px;
+color: White;
+padding-left: 5px;
+padding-right: 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+background-color: LightGreen;
+}

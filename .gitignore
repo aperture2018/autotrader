@@ -1,0 +1,5 @@
+images/
+ssl_cert/
+old versions/
+vendor/
+config.inc.php
