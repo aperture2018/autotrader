@@ -6,4 +6,22 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ccxt_async\\' => array($vendorDir . '/ccxt/ccxt/php/async'),
+    'ccxt\\' => array($vendorDir . '/ccxt/ccxt/php'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'RingCentral\\Psr7\\' => array($vendorDir . '/ringcentral/psr7/src'),
+    'Recoil\\React\\' => array($vendorDir . '/recoil/react/src'),
+    'Recoil\\Kernel\\' => array($vendorDir . '/recoil/kernel/src'),
+    'Recoil\\' => array($vendorDir . '/recoil/api/src'),
+    'React\\Stream\\' => array($vendorDir . '/react/stream/src'),
+    'React\\Socket\\' => array($vendorDir . '/react/socket/src'),
+    'React\\Promise\\Timer\\' => array($vendorDir . '/react/promise-timer/src'),
+    'React\\Promise\\Stream\\' => array($vendorDir . '/react/promise-stream/src'),
+    'React\\Promise\\' => array($vendorDir . '/react/promise/src'),
+    'React\\Http\\' => array($vendorDir . '/react/http/src'),
+    'React\\EventLoop\\' => array($vendorDir . '/react/event-loop/src'),
+    'React\\Dns\\' => array($vendorDir . '/react/dns/src'),
+    'React\\Cache\\' => array($vendorDir . '/react/cache/src'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'Icecave\\Repr\\' => array($vendorDir . '/icecave/repr/src'),
 );

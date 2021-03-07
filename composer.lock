@@ -1,9 +1,14 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a471c70a488532049919119c928c4303",
     "packages": [
         {
             "name": "ccxt/ccxt",
             "version": "1.42.65",
-            "version_normalized": "1.42.65.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ccxt/ccxt.git",
@@ -35,9 +40,7 @@
                 "recoil/react": "Required for asynchronous API calls to exchanges with PHP",
                 "recoil/recoil": "Required for asynchronous API calls to exchanges with PHP"
             },
-            "time": "2021-03-07T15:32:59+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "ccxt\\": "php/",
@@ -286,12 +289,11 @@
                     "type": "open_collective"
                 }
             ],
-            "install-path": "../ccxt/ccxt"
+            "time": "2021-03-07T15:32:59+00:00"
         },
         {
             "name": "evenement/evenement",
             "version": "v3.0.1",
-            "version_normalized": "3.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/igorw/evenement.git",
@@ -309,9 +311,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^6.0"
             },
-            "time": "2017-07-23T21:35:13+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-0": {
                     "Evenement": "src"
@@ -336,12 +336,11 @@
                 "issues": "https://github.com/igorw/evenement/issues",
                 "source": "https://github.com/igorw/evenement/tree/master"
             },
-            "install-path": "../evenement/evenement"
+            "time": "2017-07-23T21:35:13+00:00"
         },
         {
             "name": "icecave/repr",
             "version": "4.0.0",
-            "version_normalized": "4.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/icecave/repr.git",
@@ -361,9 +360,7 @@
                 "friendsofphp/php-cs-fixer": "^2",
                 "phpunit/phpunit": "^8"
             },
-            "time": "2020-08-25T02:05:11+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Icecave\\Repr\\": "src"
@@ -393,12 +390,11 @@
                 "issues": "https://github.com/icecave/repr/issues",
                 "source": "https://github.com/icecave/repr/tree/4.0.0"
             },
-            "install-path": "../icecave/repr"
+            "time": "2020-08-25T02:05:11+00:00"
         },
         {
             "name": "pear/console_table",
             "version": "v1.3.1",
-            "version_normalized": "1.3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Console_Table.git",
@@ -416,9 +412,7 @@
             "suggest": {
                 "pear/Console_Color2": ">=0.1.2"
             },
-            "time": "2018-01-25T20:47:17+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     "Table.php"
@@ -455,12 +449,11 @@
                 "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Console_Table",
                 "source": "https://github.com/pear/Console_Table"
             },
-            "install-path": "../pear/console_table"
+            "time": "2018-01-25T20:47:17+00:00"
         },
         {
             "name": "psr/http-message",
             "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
@@ -475,14 +468,12 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2016-08-06T14:39:51+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Http\\Message\\": "src/"
@@ -511,12 +502,11 @@
             "support": {
                 "source": "https://github.com/php-fig/http-message/tree/master"
             },
-            "install-path": "../psr/http-message"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "react/cache",
             "version": "v1.1.1",
-            "version_normalized": "1.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/cache.git",
@@ -535,9 +525,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35"
             },
-            "time": "2021-02-02T06:47:52+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Cache\\": "src/"
@@ -590,12 +578,11 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../react/cache"
+            "time": "2021-02-02T06:47:52+00:00"
         },
         {
             "name": "react/dns",
             "version": "v1.5.0",
-            "version_normalized": "1.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
@@ -618,9 +605,7 @@
                 "clue/block-react": "^1.2",
                 "phpunit/phpunit": "^9.3 || ^4.8.35"
             },
-            "time": "2021-03-05T12:16:50+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Dns\\": "src"
@@ -673,12 +658,11 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../react/dns"
+            "time": "2021-03-05T12:16:50+00:00"
         },
         {
             "name": "react/event-loop",
             "version": "v1.1.1",
-            "version_normalized": "1.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/event-loop.git",
@@ -701,9 +685,7 @@
                 "ext-pcntl": "For signal handling support when using the StreamSelectLoop",
                 "ext-uv": "* for ExtUvLoop"
             },
-            "time": "2020-01-01T18:39:52+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\EventLoop\\": "src"
@@ -722,12 +704,11 @@
                 "issues": "https://github.com/reactphp/event-loop/issues",
                 "source": "https://github.com/reactphp/event-loop/tree/v1.1.1"
             },
-            "install-path": "../react/event-loop"
+            "time": "2020-01-01T18:39:52+00:00"
         },
         {
             "name": "react/http",
             "version": "v1.2.0",
-            "version_normalized": "1.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/http.git",
@@ -757,9 +738,7 @@
                 "clue/socks-react": "^1.0",
                 "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35"
             },
-            "time": "2020-12-04T12:57:33+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Http\\": "src"
@@ -819,12 +798,11 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../react/http"
+            "time": "2020-12-04T12:57:33+00:00"
         },
         {
             "name": "react/promise",
             "version": "v2.8.0",
-            "version_normalized": "2.8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
@@ -842,9 +820,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^7.0 || ^6.5 || ^5.7 || ^4.8.36"
             },
-            "time": "2020-05-12T15:16:56+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Promise\\": "src/"
@@ -872,12 +848,11 @@
                 "issues": "https://github.com/reactphp/promise/issues",
                 "source": "https://github.com/reactphp/promise/tree/v2.8.0"
             },
-            "install-path": "../react/promise"
+            "time": "2020-05-12T15:16:56+00:00"
         },
         {
             "name": "react/promise-stream",
             "version": "v1.2.0",
-            "version_normalized": "1.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-stream.git",
@@ -900,9 +875,7 @@
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3",
                 "react/promise-timer": "^1.0"
             },
-            "time": "2019-07-03T12:29:10+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Promise\\Stream\\": "src/"
@@ -935,12 +908,11 @@
                 "issues": "https://github.com/reactphp/promise-stream/issues",
                 "source": "https://github.com/reactphp/promise-stream/tree/v1.2.0"
             },
-            "install-path": "../react/promise-stream"
+            "time": "2019-07-03T12:29:10+00:00"
         },
         {
             "name": "react/promise-timer",
             "version": "v1.6.0",
-            "version_normalized": "1.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-timer.git",
@@ -960,9 +932,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.0 || ^5.7 || ^4.8.35"
             },
-            "time": "2020-07-10T12:18:06+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Promise\\Timer\\": "src/"
@@ -995,12 +965,11 @@
                 "issues": "https://github.com/reactphp/promise-timer/issues",
                 "source": "https://github.com/reactphp/promise-timer/tree/v1.6.0"
             },
-            "install-path": "../react/promise-timer"
+            "time": "2020-07-10T12:18:06+00:00"
         },
         {
             "name": "react/socket",
             "version": "v1.6.0",
-            "version_normalized": "1.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
@@ -1026,9 +995,7 @@
                 "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35",
                 "react/promise-stream": "^1.2"
             },
-            "time": "2020-08-28T12:49:05+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Socket\\": "src"
@@ -1082,12 +1049,11 @@
                     "type": "github"
                 }
             ],
-            "install-path": "../react/socket"
+            "time": "2020-08-28T12:49:05+00:00"
         },
         {
             "name": "react/stream",
             "version": "v1.1.1",
-            "version_normalized": "1.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
@@ -1108,9 +1074,7 @@
                 "clue/stream-filter": "~1.2",
                 "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
             },
-            "time": "2020-05-04T10:17:57+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "React\\Stream\\": "src"
@@ -1135,12 +1099,11 @@
                 "issues": "https://github.com/reactphp/stream/issues",
                 "source": "https://github.com/reactphp/stream/tree/v1.1.1"
             },
-            "install-path": "../react/stream"
+            "time": "2020-05-04T10:17:57+00:00"
         },
         {
             "name": "recoil/api",
             "version": "1.0.2",
-            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recoilphp/api.git",
@@ -1161,9 +1124,7 @@
                 "friendsofphp/php-cs-fixer": "^2",
                 "phpunit/phpunit": "^9"
             },
-            "time": "2020-12-22T00:48:27+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Recoil\\": "src"
@@ -1198,12 +1159,11 @@
                 "issues": "https://github.com/recoilphp/api/issues",
                 "source": "https://github.com/recoilphp/api/tree/1.0.2"
             },
-            "install-path": "../recoil/api"
+            "time": "2020-12-22T00:48:27+00:00"
         },
         {
             "name": "recoil/kernel",
             "version": "1.0.3",
-            "version_normalized": "1.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recoilphp/kernel.git",
@@ -1228,9 +1188,7 @@
                 "peridot-php/peridot": "^1",
                 "peridot-php/peridot-code-coverage-reporters": "^2"
             },
-            "time": "2020-08-25T06:12:52+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Recoil\\Kernel\\": "src"
@@ -1265,12 +1223,11 @@
                 "issues": "https://github.com/recoilphp/kernel/issues",
                 "source": "https://github.com/recoilphp/kernel/tree/1.0.3"
             },
-            "install-path": "../recoil/kernel"
+            "time": "2020-08-25T06:12:52+00:00"
         },
         {
             "name": "recoil/react",
             "version": "1.0.2",
-            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recoilphp/react.git",
@@ -1298,9 +1255,7 @@
                 "peridot-php/peridot-code-coverage-reporters": "^2",
                 "recoil/dev": "^0.3"
             },
-            "time": "2018-04-29T21:00:07+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Recoil\\React\\": "src"
@@ -1336,12 +1291,11 @@
                 "issues": "https://github.com/recoilphp/react/issues",
                 "source": "https://github.com/recoilphp/react/tree/1.0.2"
             },
-            "install-path": "../recoil/react"
+            "time": "2018-04-29T21:00:07+00:00"
         },
         {
             "name": "ringcentral/psr7",
             "version": "1.3.0",
-            "version_normalized": "1.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ringcentral/psr7.git",
@@ -1363,14 +1317,12 @@
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
             },
-            "time": "2018-05-29T20:21:04+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "RingCentral\\Psr7\\": "src/"
@@ -1400,12 +1352,11 @@
             "support": {
                 "source": "https://github.com/ringcentral/psr7/tree/master"
             },
-            "install-path": "../ringcentral/psr7"
+            "time": "2018-05-29T20:21:04+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.22.1",
-            "version_normalized": "1.22.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -1423,7 +1374,6 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2021-01-22T09:19:47+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1434,7 +1384,6 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Symfony\\Polyfill\\Mbstring\\": ""
@@ -1483,9 +1432,16 @@
                     "type": "tidelift"
                 }
             ],
-            "install-path": "../symfony/polyfill-mbstring"
+            "time": "2021-01-22T09:19:47+00:00"
         }
     ],
-    "dev": true,
-    "dev-package-names": []
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
