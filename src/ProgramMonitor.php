@@ -50,5 +50,112 @@ class ProgramMonitor {
 			}
 		}
 	}
+	
+	public static function autoSell() {
+		global $db;
+		
+		// Settings
+		$results = $db->query('SELECT * FROM settings');
+		while ($row = $results->fetch_assoc()) {
+		    $settings[$row["Setting"]] = $row["Value"];
+		}
+		$dropDeviation = $settings["dropDeviation"];
+		$minProfit = $settings["minProfit"];
+		$reactionTime = $settings["reactionTime"];
+		
+		// Get coins from database
+		$coins = array();
+		$results = $db->query('SELECT * FROM program WHERE sellDate IS NULL AND sellMode = "auto"');
+		while ($row = $results->fetch_assoc()) {
+		    $coins[] = $row;
+		}
+		// Scan the array
+		foreach ($coins as $coin)
+		{
+			//Get latest bid from monitor table "market_summaries"
+			$statement = $db->prepare('SELECT Bid FROM bittrex WHERE MarketName = ?');
+			$statement->bind_param("s", $coin["coin"]);
+			$statement->bind_result($bid);
+		    $statement->execute();
+			$statement->fetch();
+			$statement->close();
+			
+			//TEST MODE
+			if (!isset($bid)) {continue;}
+			
+			// PRICE MONITORING LOGIC
+			
+			if (isset($coin["lastBid"]))
+			{
+			    $lastBid = $coin["lastBid"];
+				$lastPriceAsc = $coin["lastPriceAsc"];
+				$lastPriceDesc = $coin["lastPriceDesc"];
+				$priceDropTime = $coin["priceDropTime"];
+		        
+		        if ($bid >= $coin["lastPriceAsc"]) {
+				    $lastPriceAsc = $bid;
+					$priceDropTime = NULL;
+				}
+		        if ($bid < $coin["lastPriceAsc"]) {
+				    $lastPriceDesc = $bid;
+					if (!isset($priceDropTime)) {
+					    $priceDropTime = time();
+					}
+				}
+		        if ($bid < $coin["lastPriceDesc"]) {
+				    $lastPriceDesc = $bid;
+					if (!isset($priceDropTime)) {
+					    $priceDropTime = time();
+					}
+				}
+				if ($bid > $coin["lastPriceDesc"] && $bid < $coin["lastPriceAsc"]) {
+				    $lastPriceDesc = $bid;
+					if (!isset($priceDropTime)) {
+					    $priceDropTime = time();
+					}
+				}
+				if ($bid > $coin["lastPriceDesc"] && $bid > $coin["lastPriceAsc"]) {
+				    $lastPriceAsc = $bid;
+					$lastPriceDesc = $bid;
+					$priceDropTime = NULL;
+				}
+			} else {
+			    $lastPriceAsc = $lastPriceDesc = $bid;
+			}
+			
+			// Update database
+			$statement = $db->prepare("UPDATE program SET lastPriceAsc = ?, lastPriceDesc = ?, priceDropTime = ?, lastBid = ? WHERE coin = ?");
+		    $statement->bind_param("dddds", $lastPriceAsc, $lastPriceDesc, $priceDropTime, $bid, $coin["coin"]);
+		    $statement->execute();
+			$statement->close();
+		    
+			// SELLING LOGIC
+			$sellAmount = $coin["buyAmount"] / $coin["buyPrice"];
+			
+			// Sell on stop loss
+			if ($coin['stopLoss'] > 0) {
+			    $stopLoss = $coin['stopLoss'];
+			} else {
+			    $stopLoss = ($coin['buyPrice'] - ($coin['buyPrice'] * 0.01 * $settings['stopLoss']));
+			}
+			if ($bid < $stopLoss) {
+			   Bittrex::sellImmediately($coin['coin'], $sellAmount, $coin['id']);
+			   // Set buyNow variable
+			   $db->query('UPDATE settings SET Value = "1" WHERE Setting = "buyNow"');
+			   continue;
+			}
+			// Sell on price drop
+			if ($bid < ($coin["lastPriceAsc"] - ($coin["lastPriceAsc"] * 0.01 * $dropDeviation)) && $bid >= ($coin["buyPrice"] + ($coin["buyPrice"] * 0.01 * $minProfit))) {
+			    $currentTime = time();
+			    $timeFrame = $currentTime - $priceDropTime;
+				if ($timeFrame >= $reactionTime) {
+				    Bittrex::sellImmediately($coin['coin'], $sellAmount, $coin['id']);
+					// Set buyNow variable
+					$db->query('UPDATE settings SET Value = "1" WHERE Setting = "buyNow"');
+					continue;
+				}
+			}
+		}
+	}
 }
 ?>

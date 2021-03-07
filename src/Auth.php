@@ -1,6 +1,11 @@
 <?PHP
 class Auth {
 	public function checkUser() {
+	    //Check allowed IPs
+		$pos = strpos(ALLOWED_IPS, $_SERVER['REMOTE_ADDR']);
+		if ($pos !== false) {
+		    return;
+		}
 	    if (isset($_POST["username"]) && isset($_POST["password"])) {
 		    $_SESSION["username"] = $_POST["username"];
 			$_SESSION["password"] = $_POST["password"];

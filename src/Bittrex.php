@@ -184,28 +184,6 @@ class Bittrex {
 		}
 	    return $orderOpen;
 	}
-	
-	/**
-	*
-	* Function switchToAuto transfers coin record from 'program' to 'coins' database
-	*
-	* @var STRING $id, coin id in 'program' database
-	*
-	*/
-	public static function switchToAuto($id) {
-	    global $db;
-	    //Get coin data
-	    $results = $db->query('SELECT * FROM program WHERE id = "' . $id . '"');
-	    $coin = $results->fetch_assoc();
-		$comment = $coin['comment'] . '<br>Switched to auto';
-		//Put the coin in "coins" table
-		$statement = $db->prepare('INSERT INTO coins (marketName, buyDate, buyPrice, buyAmount, uuid, comment) VALUES (?, ?, ?, ?, ?, ?)');
-	    $statement->bind_param('siddss', $coin["coin"], $coin["buyDate"], $coin["buyPrice"], $coin["buyAmount"], $coin["buyId"], $comment);
-		$statement->execute();
-		$statement->close();
-		//Delete coin from "program" table
-	    $db->query('DELETE FROM program WHERE id="' . $id . '"');
-	}
     
 	/**
 	*
@@ -223,7 +201,7 @@ class Bittrex {
 	* @return STRING, Bittrex response message
 	*
 	*/
-	function placeBuyOrder ($coin, $buyPrice, $amount, $id) {
+	public static function placeBuyOrder ($coin, $buyPrice, $amount, $id) {
 	    global $db, $mode;
 		$buyAmount = $amount / $buyPrice;
 		$success = true;
@@ -325,6 +303,13 @@ class Bittrex {
 		$success = true;
 	    $message = "Bought immediately (simulated)";
 	    
+		//var_dump($coin);
+		//echo '<br>';
+		//var_dump($amount);
+		//echo '<br>';
+		//var_dump($id);
+		//exit;
+		
 		$curl = new Curl;
 		$curl->link = 'https://bittrex.com/api/v1.1/public/getorderbook?market=' . $coin .  '&type=sell';
 		$request = $curl->curlRequest();

@@ -44,6 +44,7 @@ $coinCooldown = $settings["coinCooldown"];
 $sellActive = $settings["sellActive"];
 $stopLoss = $settings["stopLoss"];
 $dropDeviation = $settings["dropDeviation"];
+$reactionTime = $settings["reactionTime"];
 $minProfit = $settings["minProfit"];
 $minBaseVolume = $settings["minBaseVolume"];
 $maxSpread = $settings["maxSpread"];
@@ -54,8 +55,6 @@ $minThreshold = $settings["minThreshold"];
 $pumpMonUpdateFrequency = $settings["pumpMonUpdateFrequency"];
 $pumpMonPriceChange = $settings["pumpMonPriceChange"];
 $pumpMonVolumeChange = $settings["pumpMonVolumeChange"];
-$bittrexPublicKey = $settings["bittrexPublicKey"];
-$bittrexPrivateKey = $settings["bittrexPrivateKey"];
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -68,7 +67,7 @@ $bittrexPrivateKey = $settings["bittrexPrivateKey"];
 .content {
 width:800px;
 margin:0 auto;
-margin-top: 100px;
+margin-top: 50px;
 font-family: Verdana, Arial;
 }
 .market {
@@ -159,6 +158,19 @@ margin-bottom: 5px;
    	Update frequency: <input type = "text" name = "updateFrequency" size="2" value="<?PHP {echo $updateFrequency;} ?>"> sec
   </fieldset>
   <fieldset>
+    <legend>Auto sell:</legend>
+    <input type="radio" name="sellActive" value="1" <?PHP if ($sellActive != 0) {echo "checked";} ?>> active
+    <input type="radio" name="sellActive" value="0" <?PHP if ($sellActive == 0) {echo "checked";} ?>> inactive<br>
+	Selling trigger price drop (%):
+	<input type = "text" name = "dropDeviation" size="4" value="<?PHP {echo $dropDeviation;} ?>"><br>
+	Reaction time (sec):
+	<input type = "text" name = "reactionTime" size="4" value="<?PHP {echo $reactionTime;} ?>"><br>
+	Default stop loss (%):
+	<input type = "text" name = "stopLoss" size="4" value="<?PHP {echo $stopLoss;} ?>"><br>
+	Minimum profit (%):
+	<input type = "text" name = "minProfit" size="4" value="<?PHP {echo $minProfit;} ?>"><br>
+  </fieldset>
+  <fieldset>
     <legend>Pump monitor:</legend>
 	<input type="radio" name="pumpMonitorActive" value="1" <?PHP if ($pumpMonitorActive != 0) {echo "checked";} ?>> active
     <input type="radio" name="pumpMonitorActive" value="0" <?PHP if ($pumpMonitorActive == 0) {echo "checked";} ?>> inactive<br>
@@ -169,8 +181,7 @@ margin-bottom: 5px;
 	<input type = "text" name = "pumpMonVolumeChange" size="2" value="<?PHP {echo $pumpMonVolumeChange;} ?>"> percent<br>
   </fieldset>
   <fieldset>
-    <legend>Buying options:</legend>
-    Buying:<br>
+    <legend>Auto buy:</legend>
     <input type="radio" name="buyActive" value="1" <?PHP if ($buyActive != 0) {echo "checked";} ?>> active
     <input type="radio" name="buyActive" value="0" <?PHP if ($buyActive == 0) {echo "checked";} ?>> inactive<br>
     Blacklist:<br>
@@ -196,27 +207,6 @@ margin-bottom: 5px;
 	<input type = "text" name = "maxSpread" size="4" value="<?PHP {echo $maxSpread;} ?>"><br>
 	Coin cooldown (sec):
 	<input type = "text" name = "coinCooldown" size="4" value="<?PHP {echo $coinCooldown;} ?>"><br>
-  </fieldset>
-
-  <fieldset>
-    <legend>Selling options:</legend>
-    Selling:<br>
-    <input type="radio" name="sellActive" value="1" <?PHP if ($sellActive != 0) {echo "checked";} ?>> active
-    <input type="radio" name="sellActive" value="0" <?PHP if ($sellActive == 0) {echo "checked";} ?>> inactive<br>
-	Stop loss price drop (%):
-	<input type = "text" name = "stopLoss" size="4" value="<?PHP {echo $stopLoss;} ?>"><br>
-	Selling trigger price drop (%):
-	<input type = "text" name = "dropDeviation" size="4" value="<?PHP {echo $dropDeviation;} ?>"><br>
-	Minimum profit to achieve on each coin (%):
-	<input type = "text" name = "minProfit" size="4" value="<?PHP {echo $minProfit;} ?>"><br>
-  </fieldset>
-  
-    <fieldset>
-    <legend>Bittrex API keys:</legend>
-	Public key:
-	<input type = "text" name = "bittrexPublicKey" size="38" value="<?PHP {echo $bittrexPublicKey;} ?>"><br>
-	Private key:
-	<input type = "text" name = "bittrexPrivateKey" size="37" value="<?PHP {echo $bittrexPrivateKey;} ?>"><br>
   </fieldset>
   
 <input type = "hidden" name = "update" value = "1">

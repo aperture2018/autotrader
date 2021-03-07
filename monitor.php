@@ -25,6 +25,9 @@ while ($currentTime < $endTime && $mode != "stopall")
 	
 	// Update program coins
     ProgramMonitor::update();
+	
+	// Auto sell
+	ProgramMonitor::autoSell();
     
 	// Update account balance setting
     Bittrex::getBalance();

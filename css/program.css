@@ -1,35 +1,30 @@
 .content {
-width:500px;
-margin:0 auto;
+margin-left: 400px;
 margin-top: 100px;
 font-family: Verdana, Arial;
 }
-.market {
-width: 200px;
-padding: 10px;
+.cryptocompare_chart {
 display: inline-block;
+}
+.main_form {
+display: inline-block;
+vertical-align: top;
+font-family: Verdana;
+font-size: 12px;
+color: DarkSlateGray;
 }
 .header {
 width: 600px;
-padding: 10px;
 clear: both;
 font-family: Verdana, Arial;
 font-size: 26px;
+margin-bottom: 10px;
 }
-.sold {
-width: 800px;
-padding: 10px;
-font-family: Verdana, Arial;
-font-size: 16px;
-}
-.hold {
-font-family: Verdana, Arial;
-font-size: 10px;
-color: Gray;
+.header IMG {
+vertical-align: middle;
 }
 .menu {
 width: 600px;
-padding: 10px;
 clear: both;
 font-family: Verdana, Arial;
 font-size: 16px;
@@ -59,6 +54,13 @@ animation-iteration-count: 1;
 animation-name: message;
 opacity: 0;
 }
+.form_text {
+margin-top: 5px;
+margin-bottom: 2px;
+color: DarkSlateGray;
+font-family: Verdana;
+font-size: 12px;
+}
 .deleteButton {
 font-family: Verdana, Arial;
 font-size: 12px;
@@ -74,19 +76,36 @@ color: Red;
         opacity: 0;
     }
 }
-A {
+a {
 text-decoration: none;
 color: Black;
 }
-A:hover {
+a:hover {
 text-decoration: underline;
 }
-FORM {
-width: 300px;
-font-family: Verdana, Arial;
+input[type=text] {
+padding: 5px;
+border: 2px solid LightSteelBlue;
+color: DarkSlateGray;
+font-family: Verdana;
 font-size: 12px;
 }
-INPUT, TEXTAREA {
-margin-top: 5px;
-margin-bottom: 5px;
+input[type=submit] {
+padding: 5px;
+border: 1px solid LightSteelBlue;
+color: SlateGray;
+font-family: Verdana;
+font-size: 12px;
+font-weight: bold;
+}
+input[type=text]:disabled {
+color: SlateGray;
+background-color: GhostWhite;
+border: 1px solid LightSteelBlue;
+}
+input[type=submit]:disabled {
+color: SlateGray;
+background-color: GhostWhite;
+border: 1px solid LightSteelBlue;
+font-weight: normal;
 }
